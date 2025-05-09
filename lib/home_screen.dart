@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
+// Import your other screens
 import 'package:myfirst_flutter_project_childtrack/absent_dates.dart';
 import 'package:myfirst_flutter_project_childtrack/create_profile.dart';
 import 'package:myfirst_flutter_project_childtrack/location.dart';
-import 'package:myfirst_flutter_project_childtrack/payment.dart'; // ✅ Import your payment screen
+import 'package:myfirst_flutter_project_childtrack/notification_emergency.dart';
+import 'package:myfirst_flutter_project_childtrack/payment.dart';
 
 class HomeScreen extends StatelessWidget {
   final List<Map<String, dynamic>> features = [
@@ -83,6 +85,14 @@ class HomeScreen extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                           builder: (context) => PaymentScreen(),
+                        ),
+                      );
+                    } else if (feature['title'] ==
+                        'Notifications & Emergency') {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => NotificationEmergencyScreen(),
                         ),
                       );
                     } else {
