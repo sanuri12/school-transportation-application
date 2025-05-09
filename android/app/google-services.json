@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "229505730840",
+    "project_id": "busfirebase-301cc",
+    "storage_bucket": "busfirebase-301cc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:229505730840:android:db32de98382cd1d999766d",
+        "android_client_info": {
+          "package_name": "com.example.myfirst_flutter_project_childtrack"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNvUlU86hqXLuK7j9NXcXm8sSQ8bmipWc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
