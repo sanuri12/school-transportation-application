@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:myfirst_flutter_project_childtrack/Emergency_screen.dart';
+
 import 'package:myfirst_flutter_project_childtrack/absent_dates.dart';
 import 'package:myfirst_flutter_project_childtrack/create_profile.dart';
-
 import 'package:myfirst_flutter_project_childtrack/location.dart';
+import 'package:myfirst_flutter_project_childtrack/payment.dart'; // ✅ Import your payment screen
 
 class HomeScreen extends StatelessWidget {
   final List<Map<String, dynamic>> features = [
     {'title': 'Location', 'icon': Icons.location_on},
-    {'title': 'Notifications', 'icon': Icons.notifications_none},
-
-    {'title': 'Emergency', 'icon': Icons.emergency_outlined},
+    {'title': 'Notifications & Emergency', 'icon': Icons.notifications_none},
     {'title': 'Bus drivers\nDetails', 'icon': Icons.person_outline},
     {'title': 'Payment', 'icon': Icons.attach_money},
     {'title': 'Absent dates', 'icon': Icons.close},
@@ -80,15 +78,14 @@ class HomeScreen extends StatelessWidget {
                           builder: (context) => const LocationScreen(),
                         ),
                       );
-                    } else if (feature['title'] == 'Emergency') {
+                    } else if (feature['title'] == 'Payment') {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const EmergencyScreen(),
+                          builder: (context) => PaymentScreen(),
                         ),
                       );
                     } else {
-                      // You can add navigation for other features here
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
                           content: Text(
